@@ -1,0 +1,17 @@
+The solution involves understanding CSS specificity and avoiding unnecessary use of `!important`.  Here's a corrected version of the CSS:
+
+```css
+.container {
+  color: blue;
+}
+
+.container p {
+  color: red; /* Remove !important */
+}
+
+p {
+  color: green;
+}
+```
+
+By removing the `!important` flag, the specificity rules correctly apply. The more specific `.container p` rule overrides both the `.container` and the `p` rules, resulting in the expected red color for paragraphs within the container.  This approach promotes maintainability and predictability in your CSS.
