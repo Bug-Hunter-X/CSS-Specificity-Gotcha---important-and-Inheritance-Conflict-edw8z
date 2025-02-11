@@ -1,0 +1,17 @@
+The following CSS code snippet exhibits an uncommon error related to specificity and inheritance:
+
+```css
+.container {
+  color: blue;
+}
+
+.container p {
+  color: red !important;
+}
+
+p {
+  color: green;
+}
+```
+
+This code is designed to change the color of paragraphs (p) elements within a div with the class "container" to red, overriding the default blue color from the container class.  However, depending on the context, the paragraph might unexpectedly render in green.  The reason lies in the interplay of specificity and the `!important` flag.
